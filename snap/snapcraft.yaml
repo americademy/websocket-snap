@@ -1,0 +1,25 @@
+name: codeverse-websocket
+version: 0.0.1
+architectures:
+  - build-on: armhf
+summary: Codeverse Display App
+description: |
+  A simple remote controllable display app which runs inside the Codeverse Studios
+confinement: strict
+grade: stable
+
+apps:
+  websocket:
+    command: webserver www
+    daemon: simple
+    restart-condition: always
+    plugs:
+      - network-bind
+
+parts:
+
+  websocket:
+    source: .
+    plugin: go
+    go-importpath: github.com/americademy/websocket-snap
+
