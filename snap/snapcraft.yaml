@@ -11,7 +11,7 @@ grade: stable
 base: core18
 
 apps:
-  web-api:
+  webserver:
     command: bin/webserver
     daemon: simple
     restart-condition: always
