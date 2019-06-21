@@ -10,15 +10,15 @@ grade: stable
 base: core18
 
 apps:
-  websocket:
-    command: websocket www
+  websocket-server:
+    command: webserver www
     daemon: simple
     restart-condition: always
     plugs:
       - network-bind
 
 parts:
-  websocket:
+  websocket-server:
     source: .
     plugin: go
     go-channel: 1.8/stable
