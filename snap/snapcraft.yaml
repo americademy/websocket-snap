@@ -23,4 +23,8 @@ parts:
     plugin: go
     go-importpath: github.com/americademy/websocket-snap
     go-packages: [github.com/gorilla/websocket]
+    after: [go]
+  
+  go:
+    source-tag: go1.8
 
