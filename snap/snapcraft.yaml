@@ -10,9 +10,17 @@ confinement: strict
 grade: stable
 base: core18
 
+apps:
+  web-api:
+    command: bin/webserver
+    daemon: simple
+    restart-condition: always
+    plugs:
+      - network-bind
+
 parts:
   webserver:
-    source: webserver
+    source: .
     source-type: git
     plugin: go
     go-channel: 1.8/stable
