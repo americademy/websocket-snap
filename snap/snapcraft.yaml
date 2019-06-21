@@ -9,14 +9,6 @@ confinement: strict
 grade: stable
 base: core18
 
-apps:
-  webserver:
-    command: bin/webserver
-    daemon: simple
-    restart-condition: always
-    plugs:
-      - network-bind
-
 parts:
   webserver:
     source: .
