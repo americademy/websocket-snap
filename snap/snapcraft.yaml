@@ -7,7 +7,6 @@ description: |
   A simple remote controllable display app which runs inside the Codeverse Studios
 confinement: strict
 grade: stable
-base: core18
 
 apps:
   websocket-server:
