@@ -21,10 +21,7 @@ parts:
   websocket:
     source: .
     plugin: go
+    go-channel: 1.8/stable
     go-importpath: github.com/americademy/websocket-snap
     go-packages: [github.com/gorilla/websocket]
-    after: [go]
   
-  go:
-    source-tag: go1.8
-
