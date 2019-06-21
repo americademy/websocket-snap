@@ -2,6 +2,7 @@ name: codeverse-websocket
 version: 0.0.1
 architectures:
   - build-on: armhf
+  - build-on: amd64
 summary: Codeverse Display App
 description: |
   A simple remote controllable display app which runs inside the Codeverse Studios
