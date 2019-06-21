@@ -7,18 +7,20 @@ description: |
   A simple remote controllable display app which runs inside the Codeverse Studios
 confinement: strict
 grade: stable
+base: core18
 
 apps:
-  websocket-server:
-    command: webserver www
+  webserver:
+    command: bin/webserver
     daemon: simple
     restart-condition: always
     plugs:
       - network-bind
 
 parts:
-  websocket-server:
+  webserver:
     source: .
+    source-type: git
     plugin: go
     go-channel: 1.8/stable
     go-importpath: github.com/americademy/websocket-snap
