@@ -17,9 +17,9 @@ apps:
       - network-bind
 
 parts:
-
   websocket:
     source: .
     plugin: go
     go-importpath: github.com/americademy/websocket-snap
+    go-packages: [github.com/gorilla/websocket]
 
